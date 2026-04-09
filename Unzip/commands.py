@@ -15,7 +15,7 @@ async def start(client, message):
     reply_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📍 Update Channel", url="https://t.me/log_channel_a"),
+                InlineKeyboardButton("📍 Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/log_channel_a"),
             ],
             [
                 InlineKeyboardButton("👥 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/log_channel_a"),
