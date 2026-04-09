@@ -2,7 +2,7 @@
   "name": "UnZip Bot",
   "description": "Telegram's best Open Source UnZip Bot",
   "repository": "https://github.com/anujedits42-byte/UnZip-Bot",
-  "logo": "https://files.catbox.moe/g2v4z3.jpg",
+  "logo": "https://image.zaw-myo.workers.dev/image/3deafc6b-8dd7-4ef7-8388-196890ea55ec",
   "keywords": ["telegram", "bot", "pyrogram"],
   "env": {
     "BOT_TOKEN": {
