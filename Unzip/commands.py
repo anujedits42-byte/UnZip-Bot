@@ -13,34 +13,35 @@ active_tasks = {}
 @Client.on_message(filters.command("start"))
 async def start(client, message):
     reply_markup = InlineKeyboardMarkup(
-    [
         [
-            InlineKeyboardButton("📍 Update Channel", url="https://t.me/log_channel_a"),
-        ],
-        [
-            InlineKeyboardButton("👥 Support Group", url="https://t.me/log_channel_a"),
-            InlineKeyboardButton("👩‍💻 Developer", url="https://t.me/anujedits76"),
-        ] 
-   ]
-  )
-    
-    await message.reply(start_message, reply_markup=reply_markup, parse_mode="html")
-    
-    start_message = (
-    f"✨ Hᴇʏ {message.from_user.first_name} Wᴇʟᴄᴏᴍᴇ!\n\n"
-    "📂 Yᴏᴜʀ ᴜʟᴛɪᴍᴀᴛᴇ Aʀᴄʜɪᴠᴇ Exᴛʀᴀᴄᴛᴏʀ Bᴏᴛ!\n\n"
-
-    "🚀 Fᴇᴀᴛᴜʀᴇꜱ:\n"
-    "• Iɴꜱᴛᴀɴᴛ ZIP, RAR, 7Z, TAR ᴇxᴛʀᴀᴄᴛɪᴏɴ\n"
-    "• Fᴀꜱᴛ & Sᴇᴄᴜʀᴇ ᴘʀᴏᴄᴇꜱꜱɪɴɢ\n"
-    "• Dɪʀᴇᴄᴛ URL Sᴜᴘᴘᴏʀᴛ\n"
-    "• Pᴀꜱꜱᴡᴏʀᴅ Pʀᴏᴛᴇᴄᴛᴇᴅ Aʀᴄʜɪᴠᴇꜱ\n\n"
-
-    "⚠️ 18+ ᴄᴏɴᴛᴇɴᴛ ɪꜱ ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ!\n\n"
-
-    "📤 Jᴜꜱᴛ ꜱᴇɴᴅ ᴀɴʏ ᴀʀᴄʜɪᴠᴇ ꜰɪʟᴇ ᴛᴏ ꜱᴛᴀʀᴛ!"
+            [
+                InlineKeyboardButton("📍 Update Channel", url="https://t.me/log_channel_a"),
+            ],
+            [
+                InlineKeyboardButton("👥 Support Group", url="https://t.me/log_channel_a"),
+                InlineKeyboardButton("👩‍💻 Developer", url="https://t.me/anujedits76"),
+            ] 
+        ]
     )
-    await message.reply(start_message, reply_markup=reply_markup)
+
+    start_message = (
+        f"✨ Hᴇʏ {message.from_user.first_name} Wᴇʟᴄᴏᴍᴇ!\n\n"
+        "📂 Yᴏᴜʀ ᴜʟᴛɪᴍᴀᴛᴇ Aʀᴄʜɪᴠᴇ Exᴛʀᴀᴄᴛᴏʀ Bᴏᴛ!\n\n"
+
+        "🚀 Fᴇᴀᴛᴜʀᴇꜱ:\n"
+        "• Iɴꜱᴛᴀɴᴛ ZIP, RAR, 7Z, TAR ᴇxᴛʀᴀᴄᴛɪᴏɴ\n"
+        "• Fᴀꜱᴛ & Sᴇᴄᴜʀᴇ ᴘʀᴏᴄᴇꜱꜱɪɴɢ\n"
+        "• Dɪʀᴇᴄᴛ URL Sᴜᴘᴘᴏʀᴛ\n"
+        "• Pᴀꜱꜱᴡᴏʀᴅ Pʀᴏᴛᴇᴄᴛᴇᴅ Aʀᴄʜɪᴠᴇꜱ\n\n"
+
+        "⚠️ 18+ ᴄᴏɴᴛᴇɴᴛ ɪꜱ ꜱᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ!\n\n"
+
+        "📤 Jᴜꜱᴛ ꜱᴇɴᴅ ᴀɴʏ ᴀʀᴄʜɪᴠᴇ ꜰɪʟᴇ ᴛᴏ ꜱᴛᴀʀᴛ!\n\n"
+
+        "©️ Channel : <a href='https://t.me/anujedits76'>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>"
+    )
+
+    await message.reply(start_message, reply_markup=reply_markup, parse_mode="html")
 
 
 # Callback query handler
