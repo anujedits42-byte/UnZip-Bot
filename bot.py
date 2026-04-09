@@ -1,13 +1,7 @@
-# ©️ LISA-KOREA | @LISA_FAN_LK | NT_BOT_CHANNEL | LISA-KOREA/UnZip-Bot
-
-# [⚠️ Do not change this repo link ⚠️] :- https://github.com/LISA-KOREA/UnZip-Bot
-
-
-
 from pyrogram import Client
 from Unzip.config import Config
 
-
+# 🚀 Create client
 app = Client(
     "unzip_bot",
     bot_token=Config.BOT_TOKEN,
@@ -17,5 +11,17 @@ app = Client(
 )
 
 
-print("🎊 I AM ALIVE 🎊  • Support @log_channel_a")
-app.run()
+# ✅ Startup event
+@app.on_message()
+async def alive_check(client, message):
+    pass  # optional (ignore)
+
+
+# 🔥 Main runner
+if __name__ == "__main__":
+    try:
+        print("🚀 Starting UnZip Bot...")
+        app.run()
+        print("✅ Bot stopped")
+    except Exception as e:
+        print(f"❌ Error while running bot: {e}")
