@@ -1,8 +1,8 @@
 {
   "name": "UnZip Bot",
   "description": "Telegram's best Open Source UnZip Bot",
-  "repository": "https://github.com/LISA-KOREA/UnZip-Bot",
-  "logo": "https://telegra.ph/file/dd1f5c456e1d5e9a7f8b4.jpg",
+  "repository": "https://github.com/anujedits42-byte/UnZip-Bot",
+  "logo": "https://files.catbox.moe/g2v4z3.jpg",
   "keywords": ["telegram", "bot", "pyrogram"],
   "env": {
     "BOT_TOKEN": {
