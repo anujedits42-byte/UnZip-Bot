@@ -18,8 +18,8 @@ async def start(client, message):
                 InlineKeyboardButton("📍 Update Channel", url="https://t.me/log_channel_a"),
             ],
             [
-                InlineKeyboardButton("👥 Support Group", url="https://t.me/log_channel_a"),
-                InlineKeyboardButton("👩‍💻 Developer", url="https://t.me/anujedits76"),
+                InlineKeyboardButton("👥 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/log_channel_a"),
+                InlineKeyboardButton("👩‍💻 Dᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/anujedits76"),
             ] 
         ]
     )
@@ -53,11 +53,11 @@ async def cancel(client, callback_query):
 @Client.on_message(filters.command("help"))
 async def help_command(client, message):
     help_message = (
-        "Here are the commands you can use:\n\n"
-        "/start - Start the bot and get the welcome message\n"
-        "/help - Get help on how to use the bot\n\n"
-        "To unzip a file, simply send me a ZIP file and I will extract its contents and send them back to you.\n\n"
-        "©️ Channel : <a href='https://t.me/anujedits76'>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>"
+        "Hᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ:\n\n"
+        "/start - Sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴀɴᴅ ɢᴇᴛ ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ\n"
+        "/help - Gᴇᴛ ʜᴇʟᴘ ᴏɴ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜᴇ ʙᴏᴛ\n\n"
+        "Tᴏ ᴜɴᴢɪᴘ ᴀ ꜰɪʟᴇ, ꜱɪᴍᴘʟʏ ꜱᴇɴᴅ ᴍᴇ ᴀ ZIP ꜰɪʟᴇ ᴀɴᴅ I ᴡɪʟʟ ᴇxᴛʀᴀᴄᴛ ɪᴛꜱ ᴄᴏɴᴛᴇɴᴛꜱ ᴀɴᴅ ꜱᴇɴᴅ ᴛʜᴇᴍ ʙᴀᴄᴋ ᴛᴏ ʏᴏᴜ.\n\n"
+        "©️ Cʜᴀɴɴᴇʟ : <a href='https://t.me/anujedits76'>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>"
     )
     await message.reply(help_message, parse_mode="html")
 
