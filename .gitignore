@@ -1,6 +1,38 @@
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Environment variables (VERY IMPORTANT 🔥)
 .env
+
+# Archive files (bot use karta hai)
 *.zip
 *.rar
 *.7z
+*.tar
+*.gz
+
+# Temp / extracted files
+*.log
+*.tmp
+*.cache
+
+# Virtual environment
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Heroku
+.heroku/
+
+# Database (agar future me use kare)
+*.sqlite3
