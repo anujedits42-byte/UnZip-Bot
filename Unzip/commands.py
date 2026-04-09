@@ -23,7 +23,11 @@ async def start(client, message):
         ] 
    ]
   )
-    start_message = (
+    start_message = "..."  # tumhara full message
+
+    # 👉 YAHAN lagana hai
+    await message.reply(start_message, reply_markup=reply_markup, parse_mode="html")
+    
     start_message = (
     f"✨ Hᴇʏ {message.from_user.first_name} Wᴇʟᴄᴏᴍᴇ!\n\n"
     "📂 Yᴏᴜʀ ᴜʟᴛɪᴍᴀᴛᴇ Aʀᴄʜɪᴠᴇ Exᴛʀᴀᴄᴛᴏʀ Bᴏᴛ!\n\n"
