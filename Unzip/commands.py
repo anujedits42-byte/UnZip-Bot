@@ -59,7 +59,7 @@ async def help_command(client, message):
         "To unzip a file, simply send me a ZIP file and I will extract its contents and send them back to you.\n\n"
         "©️ Channel : <a href='https://t.me/anujedits76'>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>"
     )
-    await message.reply(help_message)
+    await message.reply(help_message, parse_mode="html")
 
 
 
