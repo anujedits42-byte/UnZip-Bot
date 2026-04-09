@@ -1,11 +1,6 @@
-# ©️ LISA-KOREA | @LISA_FAN_LK | NT_BOT_CHANNEL | LISA-KOREA/UnZip-Bot
-
-# [⚠️ Do not change this repo link ⚠️] :- https://github.com/LISA-KOREA/UnZip-Bot
-
-
-
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.enums import ParseMode   # ✅ IMPORTANT
 
 active_tasks = {}
 
@@ -24,8 +19,10 @@ async def start(client, message):
         ]
     )
 
+    name = message.from_user.first_name if message.from_user else "User"
+
     start_message = (
-        f"✨ Hᴇʏ {message.from_user.first_name} Wᴇʟᴄᴏᴍᴇ!\n\n"
+        f"✨ Hᴇʏ {name} Wᴇʟᴄᴏᴍᴇ!\n\n"
         "📂 Yᴏᴜʀ ᴜʟᴛɪᴍᴀᴛᴇ Aʀᴄʜɪᴠᴇ Exᴛʀᴀᴄᴛᴏʀ Bᴏᴛ!\n\n"
 
         "🚀 Fᴇᴀᴛᴜʀᴇꜱ:\n"
@@ -41,28 +38,34 @@ async def start(client, message):
         "©️ Channel : <a href='https://t.me/anujedits76'>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>"
     )
 
-    await message.reply(start_message, reply_markup=reply_markup, parse_mode="html")
+    await message.reply(
+        start_message,
+        reply_markup=reply_markup,
+        parse_mode=ParseMode.HTML   # ✅ FIXED
+    )
 
 
-# Callback query handler
+# Cancel button
 @Client.on_callback_query(filters.regex("cancel"))
 async def cancel(client, callback_query):
     await callback_query.message.delete()
 
 
+# Help command
 @Client.on_message(filters.command("help"))
 async def help_command(client, message):
     help_message = (
         "Hᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ:\n\n"
-        "/start - Sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ᴀɴᴅ ɢᴇᴛ ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ\n"
-        "/help - Gᴇᴛ ʜᴇʟᴘ ᴏɴ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴛʜᴇ ʙᴏᴛ\n\n"
-        "Tᴏ ᴜɴᴢɪᴘ ᴀ ꜰɪʟᴇ, ꜱɪᴍᴘʟʏ ꜱᴇɴᴅ ᴍᴇ ᴀ ZIP ꜰɪʟᴇ ᴀɴᴅ I ᴡɪʟʟ ᴇxᴛʀᴀᴄᴛ ɪᴛꜱ ᴄᴏɴᴛᴇɴᴛꜱ ᴀɴᴅ ꜱᴇɴᴅ ᴛʜᴇᴍ ʙᴀᴄᴋ ᴛᴏ ʏᴏᴜ.\n\n"
+        "/start - Sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ\n"
+        "/help - Gᴇᴛ ʜᴇʟᴘ\n\n"
+        "Tᴏ ᴜɴᴢɪᴘ ᴀ ꜰɪʟᴇ, ꜱᴇɴᴅ ᴀ ZIP ꜰɪʟᴇ.\n\n"
         "©️ Cʜᴀɴɴᴇʟ : <a href='https://t.me/anujedits76'>𝐀𝐧𝐮𝐣 𝐊𝐮𝐦𝐚𝐫</a>"
     )
-    await message.reply(help_message, parse_mode="html")
+
+    await message.reply(help_message, parse_mode=ParseMode.HTML)  # ✅ FIXED
 
 
-
+# Cancel unzip
 @Client.on_callback_query(filters.regex("cancel_unzip"))
 async def cancel_callback(client, callback_query):
     user_id = callback_query.from_user.id
@@ -73,4 +76,3 @@ async def cancel_callback(client, callback_query):
         await callback_query.answer("⛔ Unzipping has been cancelled.", show_alert=True)
     else:
         await callback_query.answer("⚠️ No ongoing unzip operation.", show_alert=True)
-
